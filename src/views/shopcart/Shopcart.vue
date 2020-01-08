@@ -4,9 +4,9 @@
       <div slot="center">购物车({{cartCount}})</div>
     </nav-bar>
 
-    <cart-list/>
+    <cart-list />
 
-    <cart-bottom-bar/>
+    <cart-bottom-bar />
 
   </div>
 </template>
@@ -21,17 +21,17 @@ import { mapGetters } from 'vuex';
 
 export default {
   name: 'Shopcart',
-  data() { 
+  data () {
     return {
 
     }
   },
-  components:{
+  components: {
     NavBar,
     CartList,
     CartBottomBar
   },
-  computed:{
+  computed: {
     //mapGetters的第一种用法
     ...mapGetters(['cartCount']),
     //第二种用法
@@ -40,25 +40,25 @@ export default {
     //   list: 'cartList'
     // })
   }
- }
+}
 </script>
 
 <style  scoped>
-  #shopcart {
-    /*position: relative;*/
-    height: 100vh;
-  }
+#shopcart {
+  /*position: relative;*/
+  height: 100vh;
+}
 
-  .nav-bar {
-    background-color: var(--color-tint);
-    font-weight: 700;
-    color: #fff;
-  }
+.nav-bar {
+  background-color: var(--color-tint);
+  font-weight: 700;
+  color: #fff;
+}
 
-  .cart-list {
-    position: absolute;
-    top: 44px;
-    bottom: 49px;
-    width: 100%;
-  }
+.cart-list {
+  position: absolute;
+  top: 44px;
+  bottom: 49px;
+  width: 100%;
+}
 </style>

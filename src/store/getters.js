@@ -1,8 +1,8 @@
 const getters = {
-  cartList(state) {
+  cartList (state) {
     return state.cartList
   },
-  cartCount(state, getters) {
+  cartCount (state, getters) {
     return getters.cartList.length
   }
 }

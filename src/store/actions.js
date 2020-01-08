@@ -1,6 +1,6 @@
 const actions = {
-  addCart(context, payload) {
-    return new Promise((resolve, reject) => {
+  addCart (context, payload) {
+    return new Promise((resolve) => {
       let oldProduct = context.state.cartList.find(item => item.iid === payload.iid);
 
       //console.log(context);
